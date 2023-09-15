@@ -26,15 +26,17 @@
 /* component.css */
 .go-to-top-button {
   position: fixed;
-  bottom: 20px;
+  bottom: 100px;
   right: 20px;
   z-index: 100;
 
-  background-color: #33323d90;
-  color: $LightGreyTextField;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
+  background-color: transparent;
+  color: $SlightlyDesaturatedCyan;
+  border: 2px solid $SlightlyDesaturatedCyan;
+  border-radius: 50%;
+
+  height: 40px;
+  width: 40px;
   cursor: pointer;
   display: none;
   transition: transform 0.3s ease-in-out;
@@ -52,6 +54,7 @@
   }
 
   @media only screen and (max-width: 400px) {
+    bottom: 20px;
     i {
       font-size: 16px;
     }

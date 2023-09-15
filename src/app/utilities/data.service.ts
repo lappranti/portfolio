@@ -135,7 +135,7 @@ export class DataService {
       title: 'Tic Tac Toe',
       description:
         'Tic Tac Toe is a classic two-player board game. In our application, players can play against the computer or against another player on the same computer.',
-      id: 'tic-tac-toe-game',
+      id: 'tic-tac-toe',
       imgUrl: './assets/portfolio/desktop/preview-tic-tac-toe.jpg',
       link: 'https://lappranti.github.io/tictoctoe/menu',
       staticImg: [

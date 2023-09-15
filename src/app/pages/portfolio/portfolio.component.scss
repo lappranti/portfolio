@@ -2,24 +2,24 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  row-gap: 150px;
+  gap: 150px;
 
   * {
     transition: all 0.4s ease-in-out;
   }
 
   @media only screen and (max-width: $mobile) {
-    row-gap: 80px;
+    gap: 80px;
   }
 }
 .container {
   width: 100%;
   display: flex;
   flex-direction: column;
-  row-gap: 80px;
+  gap: 80px;
 
   @media only screen and (max-width: $mobile) {
-    row-gap: 72px;
+    gap: 72px;
   }
 }
 
@@ -45,7 +45,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    row-gap: 24px;
+    gap: 24px;
 
     color: $GrayishDarkBlue;
     border-top: 1px solid #33323d15;
@@ -95,7 +95,7 @@
     }
 
     @media only screen and (max-width: 790px) {
-      row-gap: 16px;
+      gap: 16px;
     }
   }
 
@@ -109,12 +109,14 @@
     &:nth-of-type(2n) {
       flex-direction: column;
     }
-    row-gap: 32px;
+    gap: 24px;
 
     max-width: 540px;
 
     &__description {
-      row-gap: 24px;
+      // padding: 24px;
+      gap: 24px;
+      border-top: none;
 
       h2 {
         @include heading("h2");
