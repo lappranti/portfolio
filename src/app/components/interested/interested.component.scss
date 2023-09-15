@@ -1,0 +1,91 @@
+@import "../../utilities/style";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 32px;
+
+  padding-bottom: 150px;
+
+  @media only screen and (max-width: $tablet) {
+    padding-bottom: 96px;
+  }
+  @media only screen and (max-width: $mobile) {
+    padding-bottom: 80px;
+  }
+
+  h1 {
+    @include heading("h1");
+    color: $GrayishDarkBlue;
+
+    width: 440px;
+  }
+
+  a {
+    height: 48px;
+    width: 162px;
+
+    background-color: transparent;
+    padding: none;
+    border: 1px solid $GrayishDarkBlue;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $GrayishDarkBlue;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+
+  .trait {
+    flex: 1;
+
+    border: 1px solid $GrayishDarkBlue;
+    opacity: 0.15;
+
+    @media only screen and (max-width: 800px) {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: $tablet) {
+    h1 {
+      @include heading("h2");
+    }
+  }
+
+  @media only screen and (max-width: 690px) {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+
+    h1 {
+      width: auto;
+      text-align: center;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    h1 {
+      @include heading("h3");
+      font-weight: 700;
+    }
+  }
+}

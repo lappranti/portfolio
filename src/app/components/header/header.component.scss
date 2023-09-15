@@ -1,0 +1,120 @@
+@import "../../utilities/style";
+
+.wrapper {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  padding: 64px 40px 54px;
+
+  @media only screen and (max-width: $tablet) {
+    padding: 64px 40px 48px;
+  }
+  @media only screen and (max-width: $mobile) {
+    padding: 32px 32px 40px;
+  }
+
+  .container {
+    height: 32px;
+    width: $desktop;
+    // min-width: 284px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+
+    @media only screen and (max-width: 480px) {
+      .menu-burger {
+        display: flex;
+      }
+
+      .link {
+        position: absolute;
+        top: calc(100% + 48px - 16px);
+        right: 0;
+        z-index: 10;
+
+        display: none;
+        width: 223px;
+        flex-direction: column;
+        row-gap: 32px;
+
+        padding: 40px 0;
+        background-color: $GrayishDarkBlue;
+
+        a {
+          color: white;
+
+          &:hover,
+          &.selected {
+            color: $SlightlyDesaturatedCyan;
+          }
+        }
+
+        &.active {
+          display: flex;
+        }
+
+        @media only screen and (max-width: $mobile) {
+          top: calc(100% + 40px - 16px);
+        }
+      }
+    }
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  column-gap: toRem(42);
+
+  a {
+    // Police
+    @include publicSans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $GrayishDarkBlue;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover,
+    &.selected {
+      color: $SlightlyDesaturatedCyan;
+    }
+  }
+}
+
+.menu-burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 28px;
+
+  span {
+    height: 3px;
+    background-color: $GrayishDarkBlue;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &.active {
+    span {
+      &:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+      }
+    }
+  }
+}

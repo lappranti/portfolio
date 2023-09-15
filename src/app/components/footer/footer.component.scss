@@ -1,0 +1,88 @@
+@import "../../utilities/style";
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  background-color: $GrayishDarkBlue;
+
+  padding: 0 40px;
+  @media only screen and (max-width: $mobile) {
+    padding: 0 32px;
+  }
+
+  .container {
+    width: $desktop;
+    height: toRem(80);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 480px) {
+      height: auto;
+      flex-direction: column;
+      row-gap: 40px;
+      padding: 56px;
+
+      .navbar {
+        flex-direction: column;
+        row-gap: 32px;
+      }
+
+      .socials {
+        column-gap: 15px;
+      }
+    }
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  column-gap: 32px;
+
+  a {
+    @include publicSans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+      color: $SlightlyDesaturatedCyan;
+    }
+  }
+  @media only screen and (max-width: 525px) {
+    column-gap: 12px;
+  }
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+
+  a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      color: $SlightlyDesaturatedCyan;
+    }
+  }
+
+  @media only screen and (max-width: 525px) {
+    column-gap: 12px;
+  }
+}

@@ -1,0 +1,62 @@
+<div class="wrapper">
+  <div class="container">
+    <!--HERO CONTENT-->
+    <div class="hero-container el-animated">
+      <img
+        class="img-hero"
+        src="./assets/homepage/desktop/image-homepage-hero@2x.jpg"
+        alt=""
+        *ngIf="windowSize > 768"
+      />
+      <img
+        class="img-hero"
+        src="./assets/homepage/tablet/image-homepage-hero@2x.jpg"
+        alt=""
+        *ngIf="windowSize > 375 && windowSize <= 768"
+      />
+      <img
+        class="img-hero"
+        src="./assets/homepage/mobile/image-homepage-hero@2x.jpg"
+        alt=""
+        *ngIf="windowSize <= 375"
+      />
+      <div class="hero-content">
+        <div class="profil">
+          <h1>
+            Salut, je suis Ndeury Sarré
+          </h1>
+          <span class="job">
+            Développeur web et mobile...
+          </span>
+        </div>
+        <a href="/home#about-me" class="btn-about-me">
+          <span> <img src="./assets/down-arrows.svg" alt=""/></span>
+          <span>About Me</span>
+        </a>
+      </div>
+    </div>
+    <!--ABOUT CONTENT-->
+    <div class="about" id="about-me">
+      <div class="about__image">
+        <img src="./assets/homepage/desktop/pp.jpeg" alt="photo de profil" />
+      </div>
+      <div class="about__description">
+        <h1>About Me</h1>
+        <p>
+          Je suis un développeur front-end junior à la recherche d'un nouveau
+          rôle dans une entreprise passionnante. Je me concentre sur l'écriture
+          d'HTML accessible, l'utilisation de pratiques CSS modernes et
+          l'écriture de JavaScript propre. Lorsque j'écris du code JavaScript,
+          j'utilise principalement React et Angular, mais je peux m'adapter à
+          n'importe quel outil requis. Je suis basé à Dakar, au Senegal, mais je
+          serai heureux de travailler à distance et j'ai de l'expérience dans
+          les équipes à distance.
+        </p>
+        <a routerLink="/portfolio">GO TO PORTFOLIO</a>
+      </div>
+    </div>
+
+    <!--INTERESTED-->
+    <app-interested></app-interested>
+  </div>
+</div>

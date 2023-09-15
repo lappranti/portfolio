@@ -1,0 +1,73 @@
+//### FONT FAMILY
+
+@mixin ibarraRealNova {
+  font-family: "Ibarra Real Nova", serif;
+}
+@mixin publicSans {
+  font-family: "Public Sans", sans-serif;
+}
+
+//### FUNCTION toRem
+
+@function toRem($type) {
+  @return calc($type / 16) * 1rem;
+}
+
+//### LAYOUT
+
+$desktop: toRem(1110);
+$tablet: toRem(768);
+$mobile: toRem(375);
+
+//### COLORS
+//*** PRIMARY ***
+
+$SlightlyDesaturatedCyan: #5fb4a2;
+$DarkBlue: #203a4c;
+$GrayishDarkBlue: #33323d;
+
+//*** SECONDARY ***
+
+$VeryLightGreyBG: #fafafa;
+$LightGreyTextField: #eaeaeb;
+$BrightRedErrors: #f43030;
+
+//### Typography
+
+@mixin heading($type) {
+  font-style: normal;
+  font-family: "Ibarra Real Nova";
+  @if ($type == "h1") {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 50px;
+
+    letter-spacing: -0.446429px;
+  } @else if($type == "h2") {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 42px;
+
+    letter-spacing: -0.357143px;
+  } @else if($type == "h3") {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 36px;
+
+    letter-spacing: -0.285714px;
+  }
+}
+
+@mixin body($type) {
+  font-family: "Public Sans";
+  font-style: normal;
+  @if ($type == "b1") {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+  } @else if($type == "b2") {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+  }
+}

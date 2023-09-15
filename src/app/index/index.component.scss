@@ -1,0 +1,59 @@
+@import "../utilities/style";
+.container {
+  background-color: $VeryLightGreyBG;
+  min-width: calc(32px * 2 + 223px);
+}
+
+.main-content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 0 40px;
+
+  @media only screen and (max-width: $mobile) {
+    padding: 0 32px;
+  }
+
+  .container-main-content {
+    width: $desktop;
+  }
+}
+
+/* component.css */
+.go-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+
+  background-color: #33323d90;
+  color: $LightGreyTextField;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  display: none;
+  transition: transform 0.3s ease-in-out;
+
+  i {
+    font-size: 24px;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &.show {
+    display: block;
+  }
+
+  @media only screen and (max-width: 400px) {
+    i {
+      font-size: 16px;
+    }
+  }
+}

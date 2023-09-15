@@ -1,0 +1,42 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="logo">
+      <img src="./assets/logo.svg" alt="" (click)="handleGoto('/home')" />
+    </div>
+    <ul class="link" [ngClass]="showMenu ? 'active' : ''">
+      <li class="link__item">
+        <a
+          routerLinkActive="selected"
+          routerLink="/home"
+          (click)="handleCloseMenu()"
+          >Home</a
+        >
+      </li>
+      <li class="link__item">
+        <a
+          routerLinkActive="selected"
+          routerLink="/portfolio"
+          (click)="handleCloseMenu()"
+          >Portfolio</a
+        >
+      </li>
+      <li class="link__item">
+        <a
+          routerLinkActive="selected"
+          routerLink="/contact-me"
+          (click)="handleCloseMenu()"
+          >Contact Me</a
+        >
+      </li>
+    </ul>
+    <div
+      class="menu-burger"
+      (click)="handleToggleMenu()"
+      [ngClass]="showMenu ? 'active' : ''"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,257 @@
+@import "../../utilities/style";
+
+.wrapper {
+  width: 100%;
+  display: flex;
+
+  * {
+    transition: all 0.4s ease-in-out;
+  }
+}
+
+.container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: toRem(150);
+
+  @media only screen and (max-width: $tablet) {
+    row-gap: toRem(96);
+  }
+
+  a {
+    transition: all 0.3s ease;
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}
+
+//### HERO ###
+
+.hero-container {
+  height: toRem(600);
+  width: 100%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: relative;
+
+  .img-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    @media only screen and (min-width: 690px) {
+      height: 600px;
+    }
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 52px;
+
+    max-width: toRem(600);
+    //height: toRem(338);
+
+    background-color: $VeryLightGreyBG;
+    padding: 32px 32px 0 0;
+
+    z-index: 10;
+
+    h1 {
+      @include heading("h2");
+      color: $GrayishDarkBlue;
+    }
+
+    .btn-about-me {
+      height: toRem(48);
+      width: toRem(200);
+      text-decoration: none;
+
+      display: flex;
+
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: white;
+      animation: bounce 1.5s infinite;
+
+      span {
+        &:nth-of-type(1) {
+          width: toRem(48);
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          background-color: #000000;
+          img {
+            display: block;
+          }
+        }
+
+        &:nth-of-type(2) {
+          flex: 1;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          background-color: $DarkBlue;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      h1 {
+        @include heading("h3");
+        font-weight: 700;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    //height: 680px;
+    .hero-content {
+      height: auto;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    height: 500px;
+
+    .hero-content {
+      padding: 24px 0 0;
+      gap: 32px;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    height: 480px;
+  }
+  @media only screen and (max-width: 375px) {
+    height: 450px;
+  }
+}
+
+//### ABOUT ME ###
+
+.about {
+  display: flex;
+  column-gap: 80px;
+
+  color: $GrayishDarkBlue;
+
+  &__image,
+  &__description {
+    flex: 1;
+    height: toRem(600);
+    // outline: 1px solid green;
+  }
+
+  &__image {
+    //outline: 4px solid red;
+    img {
+      display: block;
+      height: 100%;
+    }
+  }
+
+  &__description {
+    padding: toRem(32) 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 28px;
+
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-left: none;
+    border-right: none;
+    h1 {
+      @include heading("h1");
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 30px;
+      opacity: 0.8;
+    }
+
+    a {
+      height: toRem(48);
+      width: toRem(200);
+      margin-top: auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid $GrayishDarkBlue;
+      background-color: transparent;
+      padding: 0;
+
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 2px;
+      text-decoration: none;
+      color: $GrayishDarkBlue;
+
+      cursor: pointer;
+    }
+
+    @media only screen and (max-width: $tablet) {
+      row-gap: 16px;
+      padding: 24px 0;
+
+      h1 {
+        @include heading("h2");
+      }
+    }
+  }
+
+  @media only screen and (max-width: 690px) {
+    flex-direction: column;
+    row-gap: 32px;
+
+    &__image {
+      img {
+        width: 100%;
+      }
+    }
+
+    &__description {
+      height: auto;
+      padding: 50px 0;
+    }
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}

@@ -1,0 +1,56 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="content">
+      <div class="hero">
+        <img [src]="currentProjet.imgHero" alt="" />
+      </div>
+      <div class="detail">
+        <div class="detail__description">
+          <h2>{{ currentProjet.title }}</h2>
+          <p class="text">
+            {{ currentProjet.description }}
+          </p>
+          <div class="technos">
+            <p>Interaction Design / Front End Development</p>
+            <p>
+              <span *ngFor="let techno of currentProjet.technos">
+                {{ techno }}
+              </span>
+            </p>
+          </div>
+          <a [href]="currentProjet.link" target="_blank">VISIT WEBSITE</a>
+        </div>
+        <div class="detail__image">
+          <h3>Static Previews</h3>
+          <img [src]="currentStaticPrieviewImage" alt="" />
+          <div class="btn-layouts">
+            <button class="btn-layout desktop">Desktop Design</button>
+            <button class="btn-layout mobile">Mobile Design</button>
+          </div>
+        </div>
+      </div>
+      <div class="navigation">
+        <div class="prev" (click)="handleShowPrevProject()">
+          <img src="./assets/arrow-left.svg" alt="" />
+          <div class="projet">
+            <h3>{{ prevProject.id | titlecase }}</h3>
+            <span>Previous Project</span>
+          </div>
+        </div>
+        <div class="separateur"></div>
+        <div class="next" (click)="handleSowNextProject()">
+          <div class="projet">
+            <h3>{{ nextProject.id | titlecase }}</h3>
+            <span>Next Project</span>
+          </div>
+          <img
+            src="./assetsn
+          /arrow-right.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <app-interested></app-interested>
+  </div>
+</div>

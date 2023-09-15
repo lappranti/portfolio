@@ -1,0 +1,17 @@
+<div class="container">
+  <app-header></app-header>
+  <div class="main-content">
+    <div class="container-main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <app-footer></app-footer>
+  <!-- Button goto top -->
+  <button
+    class="go-to-top-button"
+    (click)="scrollToTop()"
+    [ngClass]="showGoToTopButton ? 'show' : ''"
+  >
+    <i class="bi bi-arrow-up"></i>
+  </button>
+</div>
