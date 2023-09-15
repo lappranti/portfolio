@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { gsap } from 'gsap';
+//import { gsap } from 'gsap';
 //import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 //gsap.registerPlugin(ScrollTrigger);
@@ -18,16 +18,24 @@ export class HomeComponent implements OnInit {
 
     // gsap.registerPlugin(ScrollTrigger);
 
-    gsap.from('.el-animated', {
+    /* gsap.from('.el-animated', {
       y: 100,
       duration: 2,
+
       ease: 'bounce'
-    });
+    });*/
   }
 
   getWindowWidth() {
     window.addEventListener('resize', () => {
       this.windowSize = window.innerWidth;
     });
+  }
+
+  scrollToSection() {
+    const section = document.getElementById('about-me'); // Remplacez 'section-1' par l'ID de la section cible
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' }); // Utilisez 'auto' pour un défilement instantané
+    }
   }
 }

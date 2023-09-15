@@ -33,21 +33,17 @@
         <div class="prev" (click)="handleShowPrevProject()">
           <img src="./assets/arrow-left.svg" alt="" />
           <div class="projet">
-            <h3>{{ prevProject.id | titlecase }}</h3>
+            <h3>{{ transformString(prevProject.id) }}</h3>
             <span>Previous Project</span>
           </div>
         </div>
         <div class="separateur"></div>
         <div class="next" (click)="handleSowNextProject()">
           <div class="projet">
-            <h3>{{ nextProject.id | titlecase }}</h3>
+            <h3>{{ transformString(nextProject.id) }}</h3>
             <span>Next Project</span>
           </div>
-          <img
-            src="./assetsn
-          /arrow-right.svg"
-            alt=""
-          />
+          <img src="./assets/arrow-right.svg" alt="" />
         </div>
       </div>
     </div>
