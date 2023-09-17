@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class ContactComponent implements OnInit {
   isMobileLayout!: boolean;
-  visibilityModal: boolean = false;
+  visibilityModal: boolean = true;
 
   isCopied: boolean = false;
 
@@ -26,14 +26,16 @@ export class ContactComponent implements OnInit {
       btn.style.alignSelf =
         btn.style.alignSelf == 'flex-start' ? 'flex-end' : 'flex-start';
     });
+
+    window.addEventListener('click', e => {
+      const modal = document.querySelector('.modal');
+      if (modal && modal == e.target) {
+        this.visibilityModal = false;
+      }
+    });
   }
   onSubmit(data: NgForm) {
     this.visibilityModal = !this.visibilityModal;
-    setTimeout(() => {
-      this.visibilityModal = !this.visibilityModal;
-      // Revenir en haut de la page
-      window.scrollTo(0, 0);
-    }, 3000);
   }
 
   getWindowSize() {
