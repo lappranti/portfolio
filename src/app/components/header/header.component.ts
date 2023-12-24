@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
   showMenu: boolean = false;
@@ -46,9 +46,5 @@ export class HeaderComponent implements OnInit {
 
   handleToggleMenu() {
     this.showMenu = !this.showMenu;
-  }
-
-  handleGoto(page: string) {
-    this.router.navigate([page]);
   }
 }
