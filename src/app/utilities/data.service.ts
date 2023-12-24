@@ -2,10 +2,24 @@ import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
   private listProject: Array<any> = [
+    {
+      title: 'BMI Calculator',
+      description:
+        'This application is a Body Mass Index (BMI) calculator that helps you better understand your weight in relation to your height.',
+      id: 'bmi-calculator',
+      imgUrl: '../../assets/portfolio/desktop/preview-bmi-calculator.jpg',
+      link: 'https://lappranti.github.io/bmi-calculator/',
+      staticImg: [
+        '../../assets/detail/desktop/preview-bmi-calculator.jpg',
+        '../../assets/detail/desktop/preview-bmi-mobile.jpg',
+      ],
+      imgHero: './assets/portfolio/desktop/preview-bmi-calculator.jpg',
+      technos: ['HTML', 'SCSS', 'JS'],
+    },
     {
       title: 'Manage',
       description:
@@ -15,10 +29,10 @@ export class DataService {
       link: 'https://lappranti.github.io/manage-landing-page/',
       staticImg: [
         './assets/detail/desktop/image-manage-preview-1@2x.jpg',
-        './assets/detail/desktop/image-manage-preview-2@2x.jpg'
+        './assets/detail/desktop/image-manage-preview-2@2x.jpg',
       ],
       imgHero: './assets/detail/desktop/image-manage-hero@2x.jpg',
-      technos: ['HTML', 'SCSS', 'JS']
+      technos: ['HTML', 'SCSS', 'JS'],
     },
     {
       title: 'Countries API',
@@ -29,10 +43,10 @@ export class DataService {
       link: 'https://lappranti.github.io/rest-countries-api/',
       staticImg: [
         './assets/detail/desktop/desktop-preview-contries-app.jpg',
-        './assets/detail/desktop/image-contries-preview-1@2x.jpg'
+        './assets/detail/desktop/image-contries-preview-1@2x.jpg',
       ],
       imgHero: './assets/detail/desktop/desktop-preview-contries-app.jpg',
-      technos: ['HTML', 'SCSS', 'JS']
+      technos: ['HTML', 'SCSS', 'JS'],
     },
     {
       title: 'Galleria Slideshow',
@@ -43,10 +57,10 @@ export class DataService {
       link: 'https://lappranti.github.io/galleria-slideshow-site/',
       staticImg: [
         './assets/detail/desktop/preview-galleria-slideshow.jpg',
-        './assets/detail/desktop/galleria-mobile-preview.png'
+        './assets/detail/desktop/galleria-mobile-preview.png',
       ],
       imgHero: './assets/detail/desktop/preview-galleria-slideshow.jpg',
-      technos: ['HTML', 'SCSS', 'JS']
+      technos: ['HTML', 'SCSS', 'JS'],
     },
     {
       title: 'Bookmark',
@@ -57,10 +71,10 @@ export class DataService {
       link: 'https://lappranti.github.io/bookmark-landing-page/',
       staticImg: [
         './assets/detail/desktop/image-bookmark-preview-1@2x.jpg',
-        './assets/detail/desktop/image-bookmark-preview-2@2x.jpg'
+        './assets/detail/desktop/image-bookmark-preview-2@2x.jpg',
       ],
       imgHero: './assets/detail/desktop/image-bookmark-hero@2x.jpg',
-      technos: ['HTML', 'SCSS', 'JS']
+      technos: ['HTML', 'SCSS', 'JS'],
     },
     {
       title: 'Flashcards',
@@ -71,10 +85,10 @@ export class DataService {
       link: 'https://lappranti.github.io/flashcards/',
       staticImg: [
         './assets/detail/desktop/flashcard-preview1.jpg',
-        './assets/detail/desktop/flashcard-preview2.jpg'
+        './assets/detail/desktop/flashcard-preview2.jpg',
       ],
       imgHero: './assets/detail/desktop/flashcard-preview-desktop.png.jpg',
-      technos: ['HTML', 'SCSS', 'JS']
+      technos: ['HTML', 'SCSS', 'JS'],
     },
     {
       title: 'Insure',
@@ -85,10 +99,10 @@ export class DataService {
       link: 'https://lappranti.github.io/insure-landing-page/',
       staticImg: [
         './assets/detail/desktop/image-insure-preview-1@2x.jpg',
-        './assets/detail/desktop/image-insure-preview-2@2x.jpg'
+        './assets/detail/desktop/image-insure-preview-2@2x.jpg',
       ],
       imgHero: './assets/detail/desktop/image-insure-hero@2x.jpg',
-      technos: ['HTML', 'SCSS', 'JS']
+      technos: ['HTML', 'SCSS', 'JS'],
     },
     {
       title: 'Dictionnary App',
@@ -99,10 +113,10 @@ export class DataService {
       link: 'https://lappranti.github.io/Dictionnaire-app/',
       staticImg: [
         './assets/detail/desktop/preview-dictionnary-web-app.jpg',
-        './assets/detail/desktop/dictionnary-mobile-preview.png'
+        './assets/detail/desktop/dictionnary-mobile-preview.png',
       ],
       imgHero: './assets/detail/desktop/preview-dictionnary-web-app.jpg',
-      technos: ['HTML', 'SCSS', 'JS']
+      technos: ['HTML', 'SCSS', 'JS'],
     },
     {
       title: 'Fylo',
@@ -113,10 +127,10 @@ export class DataService {
       link: 'https://lappranti.github.io/fylo-dark-theme-landing-page/',
       staticImg: [
         './assets/detail/desktop/image-fylo-preview-1@2x.jpg',
-        './assets/detail/desktop/image-fylo-preview-2@2x.jpg'
+        './assets/detail/desktop/image-fylo-preview-2@2x.jpg',
       ],
       imgHero: './assets/detail/desktop/image-fylo-hero@2x.jpg',
-      technos: ['HTML', 'SCSS', 'JS']
+      technos: ['HTML', 'SCSS', 'JS'],
     },
     {
       title: 'Memory Game',
@@ -126,10 +140,10 @@ export class DataService {
       link: 'https://lappranti.github.io/memory-game/',
       staticImg: [
         './assets/detail/desktop/preview-memory-game.jpg',
-        './assets/detail/desktop/memory-game-mobile-preview.png'
+        './assets/detail/desktop/memory-game-mobile-preview.png',
       ],
       imgHero: './assets/detail/desktop/preview-memory-game.jpg',
-      technos: ['HTML', 'SCSS', 'JS']
+      technos: ['HTML', 'SCSS', 'JS'],
     },
     {
       title: 'Tic Tac Toe',
@@ -140,10 +154,10 @@ export class DataService {
       link: 'https://lappranti.github.io/tictoctoe/menu',
       staticImg: [
         './assets/detail/desktop/preview-tic-tac-toe.jpg',
-        './assets/detail/desktop/memory-game-mobile-preview.png'
+        './assets/detail/desktop/memory-game-mobile-preview.png',
       ],
       imgHero: './assets/detail/desktop/preview-tic-tac-toe.jpg',
-      technos: ['HTML', 'SCSS', 'JS']
+      technos: ['HTML', 'SCSS', 'JS'],
     },
     {
       title: 'GitHub user search',
@@ -154,10 +168,10 @@ export class DataService {
       link: 'https://lappranti.github.io/github-user-search-app/',
       staticImg: [
         './assets/detail/desktop/gitHub-search-preview.jpg',
-        './assets/detail/desktop/github-search-preview-mobile.png'
+        './assets/detail/desktop/github-search-preview-mobile.png',
       ],
       imgHero: './assets/detail/desktop/gitHub-search-preview.jpg',
-      technos: ['HTML', 'SCSS', 'JS']
+      technos: ['HTML', 'SCSS', 'JS'],
     },
     {
       title: 'Planets fact site',
@@ -168,10 +182,10 @@ export class DataService {
       link: 'https://lappranti.github.io/planets-fact-site/',
       staticImg: [
         './assets/detail/desktop/preview-planets-fact-site.jpg',
-        './assets/detail/desktop/planets-fact-site-preview-mobile.jpg'
+        './assets/detail/desktop/planets-fact-site-preview-mobile.jpg',
       ],
       imgHero: './assets/detail/desktop/preview-planets-fact-site.jpg',
-      technos: ['HTML', 'SCSS', 'JS']
+      technos: ['HTML', 'SCSS', 'JS'],
     },
     {
       title: 'Age Caulculator',
@@ -181,10 +195,10 @@ export class DataService {
       link: 'https://lappranti.github.io/age-calculator-app/',
       staticImg: [
         './assets/detail/desktop/desktop-preview.jpg',
-        './assets/detail/desktop/age-calculator-preview-mobile.jpg'
+        './assets/detail/desktop/age-calculator-preview-mobile.jpg',
       ],
       imgHero: './assets/detail/desktop/desktop-completed.jpg',
-      technos: ['HTML', 'SCSS', 'JS']
+      technos: ['HTML', 'SCSS', 'JS'],
     },
     {
       title: 'Caulculator App',
@@ -195,11 +209,11 @@ export class DataService {
       link: 'https://lappranti.github.io/mini-caculator-app/',
       staticImg: [
         './assets/detail/desktop/desktop-design-theme-3.jpg',
-        './assets/detail/desktop/desktop-design-theme-mobile.jpg'
+        './assets/detail/desktop/desktop-design-theme-mobile.jpg',
       ],
       imgHero: './assets/detail/desktop/desktop-preview-caulculator.jpg',
-      technos: ['HTML', 'SCSS', 'JS']
-    }
+      technos: ['HTML', 'SCSS', 'JS'],
+    },
     // ... autres éléments
   ];
 
