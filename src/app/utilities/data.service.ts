@@ -7,15 +7,28 @@ import { of } from 'rxjs';
 export class DataService {
   private listProject: Array<any> = [
     {
+      title: 'aAudiophile Ecommerce Website',
+      description: `An e-commerce website for Audiophile entirely developed using Angular. This project represents a combination of my skills in web development, user interface design, and project management.`,
+      id: 'audiophile-ecommerce-website',
+      imgUrl: './assets/portfolio/desktop/preview-audiophile-ecommerce.jpg',
+      link: 'https://audiophile-ecommerce-website-lappranti.vercel.app/',
+      staticImg: [
+        './assets/portfolio/desktop/preview-audiophile-ecommerce.jpg',
+        './assets/portfolio/desktop/preview-audiophile-ecommerce-mobile.png',
+      ],
+      imgHero: './assets/portfolio/desktop/preview-audiophile-ecommerce.jpg',
+      technos: ['HTML', 'SCSS', 'JS'],
+    },
+    {
       title: 'BMI Calculator',
       description:
         'This application is a Body Mass Index (BMI) calculator that helps you better understand your weight in relation to your height.',
       id: 'bmi-calculator',
-      imgUrl: '../../assets/portfolio/desktop/preview-bmi-calculator.jpg',
+      imgUrl: './assets/portfolio/desktop/preview-bmi-calculator.jpg',
       link: 'https://lappranti.github.io/bmi-calculator/',
       staticImg: [
-        '../../assets/detail/desktop/preview-bmi-calculator.jpg',
-        '../../assets/detail/desktop/preview-bmi-mobile.jpg',
+        './assets/detail/desktop/preview-bmi-calculator.jpg',
+        './assets/detail/desktop/preview-bmi-mobile.jpg',
       ],
       imgHero: './assets/portfolio/desktop/preview-bmi-calculator.jpg',
       technos: ['HTML', 'SCSS', 'JS'],
